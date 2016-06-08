@@ -1,0 +1,55 @@
+List of all teams in JLiga:
+1. FC Kaiserslautern
+1. FC Köln
+1. FC Nürnberg
+1. FC Saarbrücken
+1. FSV Mainz 05
+1899 Hoffenheim
+Alemannia Aachen
+Arminia Bielefeld
+Bayer 04 Leverkusen
+Blau-Weiß 90 Berlin
+Borussia Dortmund
+Borussia Mönchengladbach
+Borussia Neunkirchen
+Dynamo Dresden
+Eintracht Braunschweig
+Eintracht Frankfurt
+FC 08 Homburg
+FC Augsburg
+FC Bayern München
+FC Energie Cottbus
+FC Hansa Rostock
+FC Ingolstadt 04
+FC Schalke 04
+FC St. Pauli
+Fortuna Düsseldorf
+Fortuna Köln
+Hamburger SV
+Hannover 96
+Hertha BSC
+Karlsruher SC
+KFC Uerdingen 05
+Kickers Offenbach
+MSV Duisburg
+Preußen Münster
+Rot-Weiß Essen
+RW Oberhausen
+SC Freiburg
+SC Paderborn
+SG Wattenscheid 09
+SpVgg Greuther Fürth
+SpVgg Unterhaching
+SSV Ulm 1846
+Stuttgart Kickers
+SV Darmstadt 98
+Tasmania 1900 Berlin
+Tennis Borussia Berlin
+TSV 1860 München
+VfB Leipzig
+VfB Stuttgart
+VfL Bochum
+VfL Wolfsburg
+Waldhof Mannheim
+Werder Bremen
+Wuppertaler SV

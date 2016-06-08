@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="JLiga_EJB">
+        <wb-resource deploy-path="/" source-path="/ejbModule" tag="defaultRootSource"/>
+        <property name="ClientJARURI" value="JLiga_LIB.jar"/>
+        <property name="ClientProject" value="JLiga_LIB"/>
+        <property name="java-output-path" value="/JLiga_EJB/build/classes"/>
+    </wb-module>
+</project-modules>

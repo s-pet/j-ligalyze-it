@@ -50,6 +50,14 @@ public interface RemoteLigaMgmt {
 	
 	
 	/**
+	 * Retrieve a list of all names of the seasons.
+	 * 
+	 * @return List of all names of the seasons.
+	 */
+	List<String> getSeasonNames();
+	
+	
+	/**
 	 * Store team in database.
 	 * 
 	 * @param team The team to be stored.
@@ -76,6 +84,16 @@ public interface RemoteLigaMgmt {
 	
 	
 	/**
+	 * Retrieve a list of all teams of a season.
+	 * 
+	 * @param season The season.
+	 * 
+	 * @return The list of teams of the the season.
+	 */
+	List<Team> getTeams(Season season);
+	
+	
+	/**
 	 * Retrieve a team by it's name.
 	 * 
 	 * @param name The name of the team.
@@ -83,6 +101,9 @@ public interface RemoteLigaMgmt {
 	 * @return The team with the specified name or null.
 	 */
 	Team getTeam(String name);
+	
+	
+	
 	
 
 }

@@ -1,0 +1,50 @@
+package com.github.s_pet.jliga.client.table;
+
+import java.util.Map;
+
+import com.github.s_pet.jliga.entity.Match;
+import com.github.s_pet.jliga.entity.Season;
+
+
+/**
+ * @author soenke
+ *
+ */
+public class CalculatorHome extends Calculator {
+
+	/* (non-Javadoc)
+	 * @see com.github.s_pet.jliga.client.table.Calculator#calculateTables(com.github.s_pet.jliga.entity.Season)
+	 */
+	@Override
+	public Map<Integer, LigaTable> calculateTables(Season season) {
+		return super.calculateTables(season, TableKind.HomeTable);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.github.s_pet.jliga.client.table.Calculator#doRatingHome(com.github.s_pet.jliga.client.table.TableEntry, com.github.s_pet.jliga.entity.Match)
+	 */
+	@Override
+	protected TableEntry doRatingHome(TableEntry entry, Match match) {
+		TableEntry newEntry = entry;
+		if (entry.getTeam().equals(match.getTeamHome())) {
+			if (match.getGoalsHome() > match.getGoalsAway()) {
+				newEntry.setPoints(entry.getPoints() + 3);
+			}
+			if (match.getGoalsHome() == match.getGoalsAway()) {
+				newEntry.setPoints(entry.getPoints() + 1);
+			}
+			newEntry.setGoals(entry.getGoals() + match.getGoalsHome());
+			newEntry.setGoalsAgainst(entry.getGoalsAgainst() + match.getGoalsAway());
+		}
+		return newEntry;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.github.s_pet.jliga.client.table.Calculator#doRatingAway(com.github.s_pet.jliga.client.table.TableEntry, com.github.s_pet.jliga.entity.Match)
+	 */
+	@Override
+	protected TableEntry doRatingAway(TableEntry entry, Match match) {
+		return entry;
+	}
+
+}

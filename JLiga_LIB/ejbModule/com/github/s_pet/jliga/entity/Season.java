@@ -20,6 +20,7 @@ import javax.persistence.Table;
 @EntityListeners(com.github.s_pet.jliga.entity.listener.JLigaEntityListener.class)
 @NamedQueries({
 	@NamedQuery(name="getSeasons", query="select x from Season x"),
+	@NamedQuery(name="getSeasonNames", query="select x.name from Season x"),
 	@NamedQuery(name="getSeasonByName", query="select x from Season x where x.name = :name")
 })
 @Table(name="JSeason")

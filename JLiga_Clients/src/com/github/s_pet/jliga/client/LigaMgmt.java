@@ -66,4 +66,14 @@ public class LigaMgmt implements RemoteLigaMgmt {
 		return remote.getSeasons();
 	}
 
+	@Override
+	public List<String> getSeasonNames() {
+		return remote.getSeasonNames();
+	}
+
+	@Override
+	public List<Team> getTeams(Season season) {
+		return remote.getTeams(season);
+	}
+
 }

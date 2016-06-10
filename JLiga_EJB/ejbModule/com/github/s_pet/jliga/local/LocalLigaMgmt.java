@@ -1,5 +1,7 @@
 package com.github.s_pet.jliga.local;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.ejb.Stateful;
@@ -9,6 +11,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import com.github.s_pet.jliga.entity.Match;
 import com.github.s_pet.jliga.entity.Season;
 import com.github.s_pet.jliga.entity.Team;
 import com.github.s_pet.jliga.local.interceptor.StatefulSessionBeanInterceptor;
@@ -83,6 +86,27 @@ public class LocalLigaMgmt implements RemoteLigaMgmt {
 	public List<Season> getSeasons() {
 		Query query = em.createNamedQuery("getSeasons", Season.class);
 		return (List<Season>) query.getResultList();
+	}
+
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<String> getSeasonNames() {
+		Query query = em.createNamedQuery("getSeasonNames", String.class);
+		return (List<String>) query.getResultList();
+	}
+
+
+	@Override
+	public List<Team> getTeams(Season season) {
+		List<Team> teams = new ArrayList<Team>();
+		Iterator<Match> iter = season.getMatchdays().get(1).getMatches().iterator();
+		while (iter.hasNext()) {
+			Match match = iter.next();
+			teams.add(match.getTeamHome());
+			teams.add(match.getTeamAway());
+		}
+		return teams;
 	}
 
 }
